@@ -5,7 +5,7 @@ export default function LandingPage() {
     <div>
       <header className="bannar">
         <h1 className="bannar-header">Lang Learn</h1>
-        <p className="bannar-text">Lean your language through Imersion</p>
+        <p className="bannar-text">Learn your language through Immersion</p>
         <div className="btn-container">
           <NavLink className="nav-btn" to="/login">
             <button className="log-btn">Log-in</button>
