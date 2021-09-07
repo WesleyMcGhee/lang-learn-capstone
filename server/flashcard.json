@@ -4,6 +4,48 @@
     "lesson_id": 1,
     "card_front": "あ",
     "card_back1": "A",
-    "card_back2": "Awful"
+    "card_back2": "(Aw)ful"
+  },
+  {
+    "id": 2,
+    "lesson_id": 1,
+    "card_front": "い",
+    "card_back1": "I",
+    "card_back2": "Cr(ee)k"
+  },
+  {
+    "id": 3,
+    "lesson_id": 1,
+    "card_front": "え",
+    "card_back1": "E",
+    "card_back2": "(E)gg"
+  },
+  {
+    "id": 4,
+    "lesson_id": 1,
+    "card_front": "お",
+    "card_back1": "O",
+    "card_back2": "(Oh)"
+  },
+  {
+    "id": 5,
+    "lesson_id": 1,
+    "card_front": "う",
+    "card_back1": "U",
+    "card_back2": "(U)ber"
+  },
+  {
+    "id": 6,
+    "lesson_id": 1,
+    "card_front": "あお",
+    "card_back1": "Blue",
+    "card_back2": "Ao"
+  },
+  {
+    "id": 7,
+    "lesson_id": 1,
+    "card_front": "うえ",
+    "card_back1": "Above",
+    "card_back2": "Ue"
   }
 ]

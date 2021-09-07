@@ -1,4 +1,5 @@
 const express = require("express");
+const ctrl = require("./controller");
 const app = express();
 const cors = require("cors");
 const port = 5000;
@@ -6,4 +7,6 @@ const port = 5000;
 app.use(express.json());
 app.use(cors());
 
-app.listen(port, `Server is up and running on ${port}...`);
+app.post("/users", ctrl.postSignup);
+
+app.listen(port, () => console.log(`Server is up and running on ${port}...`));
