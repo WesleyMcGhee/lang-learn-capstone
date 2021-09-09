@@ -25,15 +25,18 @@ module.exports = {
       );
       let actUser = usersLog.rows[0];
       if (actUser.username === username) {
-        let matched = bcrypt.compareSync(password, actUser.password);
+        let matched = bcrypt.compare(passHash, actUser.password);
+        console.log(matched);
         if (matched) {
-          return res.status(200), send(actUser.id);
+          console.log("hello");
+          console.log(actUser.id);
+          return res.status(200).send({ id: actUser.id, token: "key28834" });
         }
       } else {
-        return res.status(200).send(-1);
+        return res.status(200).send({ id: -1 });
       }
     } catch (err) {
-      res.status(400).send("Username not availible");
+      res.status(401).send("Username not availible");
     }
   },
 };
