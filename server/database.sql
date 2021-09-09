@@ -4,15 +4,15 @@ CREATE TABLE users(
     id SERIAL PRIMARY KEY,
     username VARCHAR(20) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
-    lessonId INT NOT NULL,
-    languageid INT NOT NULL,
+    lessonId INT,
+    languageid INT,
     email VARCHAR(255) NOT NULL UNIQUE
 );
 
 CREATE TABLE lessons(
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL UNIQUE,
-    languageid INT NOT NULL
+    languageid INT
 );
 
 CREATE TABLE languages(
@@ -22,12 +22,12 @@ CREATE TABLE languages(
 
 CREATE TABLE flashcards(
     id SERIAL PRIMARY KEY,
-    lessonid INT NOT NULL
+    lessonid INT
 );
 
 CREATE TABLE tips(
     id SERIAL PRIMARY KEY,
-    lessonid INT NOT NULL
+    lessonid INT
 );
 
 ALTER TABLE "users" ADD CONSTRAINT "users_fk0" FOREIGN KEY ("lessonid") REFERENCES "lessons"("id");

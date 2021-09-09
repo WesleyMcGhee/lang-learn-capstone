@@ -8,9 +8,13 @@ export default function () {
   const [email, setEmail] = useState("");
 
   function sendInfo() {
-    if (password === conPass) {
+    if (password === conPass && password) {
       axios
-        .post("http://localhost:5000/users", { username, password, email })
+        .post("http://localhost:5000/users/signup", {
+          username,
+          password,
+          email,
+        })
         .then((res) => {
           console.log(res.data);
         });
@@ -35,7 +39,12 @@ export default function () {
       <LogHeader />
       <section className="form-content">
         <h1 className="log-bannar">Sign-Up</h1>
-        <form>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            sendInfo();
+          }}
+        >
           <input
             type="email"
             placeholder="email"
@@ -64,7 +73,6 @@ export default function () {
             type="submit"
             text="Sign-Up"
             className="form-item form-btn"
-            onClick={sendInfo()}
           ></input>
         </form>
       </section>
