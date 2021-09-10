@@ -17,13 +17,6 @@ function getToken() {
 
 function App() {
   const token = getToken();
-  function findPath() {
-    if (!token) {
-      return "/";
-    } else {
-      return "/login";
-    }
-  }
   return (
     <div className="app">
       <Switch>
