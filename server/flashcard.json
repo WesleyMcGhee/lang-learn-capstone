@@ -47,5 +47,61 @@
     "card_front": "うえ",
     "card_back1": "Above",
     "card_back2": "Ue"
+  },
+  {
+    "id": 8,
+    "lesson_id": 1,
+    "card_front": "うえ",
+    "card_back1": "Above",
+    "card_back2": "Ue"
+  },
+  {
+    "id": 9,
+    "lesson_id": 2,
+    "card_front": "か",
+    "card_back1": "(Ka)rma",
+    "card_back2": "Ka"
+  },
+  {
+    "id": 10,
+    "lesson_id": 2,
+    "card_front": "Ki",
+    "card_back1": "Key",
+    "card_back2": "Ki"
+  },
+  {
+    "id": 11,
+    "lesson_id": 2,
+    "card_front": "く",
+    "card_back1": "(Koo)-koo",
+    "card_back2": "Ku"
+  },
+  {
+    "id": 12,
+    "lesson_id": 2,
+    "card_front": "け",
+    "card_back1": "Kay",
+    "card_back2": "Ke"
+  },
+  {
+    "id": 13,
+    "lesson_id": 2,
+    "card_front": "こ",
+    "card_back1": "(Co)la",
+    "card_back2": "Ko"
+  },
+  {
+    "id": 14,
+    "lesson_id": 2,
+    "card_front": "かき",
+    "card_back1": "Draw",
+    "card_back2": "Kaki"
+  },
+  {
+    "id": 15,
+    "lesson_id": 2,
+    "card_front": "かお",
+    "card_back1": "Face",
+    "card_back2": "Kao"
   }
 ]

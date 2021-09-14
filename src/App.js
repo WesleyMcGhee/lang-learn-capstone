@@ -2,8 +2,11 @@ import Signup from "./pages/Signup";
 import React, { useState } from "react";
 import Login from "./pages/login";
 import LandingPage from "./pages/landingpage";
+import LessonContent from "./pages/LessonContent";
 import { Link, Route, Switch } from "react-router-dom";
 import Lessons from "./pages/lessons";
+import Tips from "./pages/Tips";
+import Flashcards from "./pages/Flashcards";
 import "./App.css";
 
 function setToken(userToken) {
@@ -28,6 +31,9 @@ function App() {
         />
         <Route path="/signup" component={Signup} />
         <Route exact path="/lessons" component={Lessons} />
+        <Route path="/lessons/:id" component={LessonContent} />
+        <Route path="/tips" component={Tips} />
+        <Route path="/flashcards" component={Flashcards} />
       </Switch>
     </div>
   );

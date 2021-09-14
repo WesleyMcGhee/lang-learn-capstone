@@ -1,5 +1,8 @@
 const pool = require("./db");
 const bcrypt = require("bcrypt");
+const lessons = require("./lesson.json");
+const flashCards = require("./flashcard.json");
+
 module.exports = {
   postSignup: async (req, res) => {
     try {
@@ -26,10 +29,7 @@ module.exports = {
       let actUser = usersLog.rows[0];
       if (actUser.username === username) {
         let matched = bcrypt.compare(passHash, actUser.password);
-        console.log(matched);
         if (matched) {
-          console.log("hello");
-          console.log(actUser.id);
           return res.status(200).send({ id: actUser.id, token: "key28834" });
         }
       } else {
@@ -38,5 +38,38 @@ module.exports = {
     } catch (err) {
       res.status(401).send("Username not availible");
     }
+  },
+  getUsers: async (req, res) => {
+    try {
+      const { id } = req.params;
+      const userLog = await pool.query(
+        "SELECT username, lessonid FROM users WHERE id = $1",
+        [id]
+      );
+      res.status(200).send(userLog.rows[0]);
+    } catch (err) {
+      res.status(404).send("User not Found");
+      console.error(err);
+    }
+  },
+  getLesson: (req, res) => {
+    const { id } = req.params;
+    const dataToSend = [];
+    for (let i in lessons) {
+      if (lessons[i].lessonId === +id) {
+        dataToSend.push(lessons[i]);
+      }
+    }
+    res.status(200).send(dataToSend);
+  },
+  getFlashcards: (req, res) => {
+    const { id } = req.params;
+    const dataToSend = [];
+    for (let i in flashCards) {
+      if (flashCards[i].lesson_id === +id) {
+        dataToSend.push(lessons[i]);
+      }
+    }
+    res.status(200).send(dataToSend);
   },
 };
