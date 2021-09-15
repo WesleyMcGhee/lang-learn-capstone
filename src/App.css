@@ -184,3 +184,48 @@
   color: #3d348b;
   margin-left: 30%;
 }
+.lessonContentPage {
+  margin: 5vh auto 0 auto;
+  width: 40vw;
+  background-color: rgb(218, 218, 218);
+  height: 60vh;
+}
+.lessonQuestion {
+  font-size: 5rem;
+  height: 80%;
+}
+.lessonAnswer {
+  height: 9vh;
+  width: 9vw;
+  margin-right: 0.5vw;
+  background-color: #6290c3;
+  border: 3px solid #3d348b;
+  color: white;
+  font-size: 3rem;
+}
+.lessonLink {
+  text-decoration: none;
+}
+.flashcard {
+  margin: 5vh auto 0 auto;
+  width: 40vw;
+  height: 50vh;
+  background-color: rgb(218, 218, 218);
+  font-size: 5rem;
+}
+.navigate {
+  margin: 0 auto;
+  width: 40vw;
+  height: 10vh;
+  background-color: rgb(218, 218, 218);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav-btn {
+  height: 9vh;
+  width: 10vw;
+  background-color: #6290c3;
+  border: 3px solid #3d348b;
+  font-size: 2rem;
+}

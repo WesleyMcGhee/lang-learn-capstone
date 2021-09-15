@@ -7,6 +7,7 @@ import { Link, Route, Switch } from "react-router-dom";
 import Lessons from "./pages/lessons";
 import Tips from "./pages/Tips";
 import Flashcards from "./pages/Flashcards";
+import FlashcardsCon from "./pages/FlashcardsCon";
 import "./App.css";
 
 function setToken(userToken) {
@@ -33,7 +34,8 @@ function App() {
         <Route exact path="/lessons" component={Lessons} />
         <Route path="/lessons/:id" component={LessonContent} />
         <Route path="/tips" component={Tips} />
-        <Route path="/flashcards" component={Flashcards} />
+        <Route exact path="/flashcards" component={Flashcards} />
+        <Route path="/flashcards/:id" component={FlashcardsCon} />
       </Switch>
     </div>
   );

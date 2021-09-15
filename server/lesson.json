@@ -7,7 +7,7 @@
     "option2": "A",
     "option3": "I",
     "option4": "O",
-    "answer": "option2",
+    "answer": "A",
     "completed": false
   },
   {
@@ -18,7 +18,7 @@
     "option2": "A",
     "option3": "U",
     "option4": "I",
-    "answer": "option4",
+    "answer": "I",
     "completed": false
   },
   {
@@ -29,7 +29,7 @@
     "option2": "E",
     "option3": "I",
     "option4": "O",
-    "answer": "option2",
+    "answer": "E",
     "completed": false
   },
   {
@@ -40,7 +40,7 @@
     "option2": "A",
     "option3": "U",
     "option4": "E",
-    "answer": "option1",
+    "answer": "O",
     "completed": false
   },
   {
@@ -51,7 +51,7 @@
     "option2": "A",
     "option3": "U",
     "option4": "I",
-    "answer": "option3",
+    "answer": "U",
     "completed": false
   },
   {
@@ -62,7 +62,7 @@
     "option2": "Blue",
     "option3": "Red",
     "option4": "Purlple",
-    "answer": "option2",
+    "answer": "Blue",
     "completed": false
   },
   {
@@ -73,7 +73,7 @@
     "option2": "Down",
     "option3": "Right",
     "option4": "Left",
-    "answer": "option1",
+    "answer": "Up",
     "completed": false
   },
   {
@@ -84,7 +84,7 @@
     "option2": "Maybe",
     "option3": "No",
     "option4": "Thanks",
-    "answer": "option3",
+    "answer": "No",
     "completed": false
   },
   {
@@ -139,7 +139,7 @@
     "option2": "Ko",
     "option3": "Ka",
     "option4": "Ki",
-    "answer": "Ka",
+    "answer": "Ku",
     "completed": false
   },
   {

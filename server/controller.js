@@ -64,12 +64,12 @@ module.exports = {
   },
   getFlashcards: (req, res) => {
     const { id } = req.params;
-    const dataToSend = [];
+    const dataToSend1 = [];
     for (let i in flashCards) {
       if (flashCards[i].lesson_id === +id) {
-        dataToSend.push(lessons[i]);
+        dataToSend1.push(flashCards[i]);
       }
     }
-    res.status(200).send(dataToSend);
+    res.status(200).send(dataToSend1);
   },
 };
