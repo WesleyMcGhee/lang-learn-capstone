@@ -172,6 +172,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  text-decoration: none;
 }
 .tipsLogo {
   font-size: 4rem;
@@ -222,10 +223,25 @@
   align-items: center;
   justify-content: space-around;
 }
-.nav-btn {
+.flash-btn {
   height: 9vh;
   width: 10vw;
   background-color: #6290c3;
   border: 3px solid #3d348b;
   font-size: 2rem;
+}
+.learningSection {
+  margin: 5vh auto 5vh auto;
+  width: 40vw;
+  background-color: #dfdddd;
+  padding: 5vh 2vw;
+}
+.charLearn {
+  margin-bottom: 2vh;
+}
+.curChar {
+  font-size: 5rem;
+}
+.lessonBannar {
+  margin-top: 5vh;
 }

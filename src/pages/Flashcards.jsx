@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Header from "../components/Header";
 export default function Flashcards() {
   return (
@@ -6,14 +7,14 @@ export default function Flashcards() {
       <Header />
       <h1>Flashcards</h1>
       <section className="tipsSection">
-        <div className="tipsLesson">
+        <Link to="/flashcards/1" className="tipsLesson">
           <h2 className="tipsLogo">あ</h2>
           <p className="tipsName">ひらがな１</p>
-        </div>
-        <div className="tipsLesson">
+        </Link>
+        <Link to="/flashcards/2" className="tipsLesson">
           <h2 className="tipsLogo">か</h2>
           <p className="tipsName">ひらがな２</p>
-        </div>
+        </Link>
       </section>
     </div>
   );

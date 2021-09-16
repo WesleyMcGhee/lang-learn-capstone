@@ -1,5 +1,5 @@
 import Signup from "./pages/Signup";
-import React, { useState } from "react";
+import React from "react";
 import Login from "./pages/login";
 import LandingPage from "./pages/landingpage";
 import LessonContent from "./pages/LessonContent";
@@ -8,6 +8,8 @@ import Lessons from "./pages/lessons";
 import Tips from "./pages/Tips";
 import Flashcards from "./pages/Flashcards";
 import FlashcardsCon from "./pages/FlashcardsCon";
+import Tips1 from "./pages/tipsPage/Tips1";
+import Tips2 from "./pages/tipsPage/Tips2";
 import "./App.css";
 
 function setToken(userToken) {
@@ -33,9 +35,11 @@ function App() {
         <Route path="/signup" component={Signup} />
         <Route exact path="/lessons" component={Lessons} />
         <Route path="/lessons/:id" component={LessonContent} />
-        <Route path="/tips" component={Tips} />
+        <Route exact path="/tips" component={Tips} />
         <Route exact path="/flashcards" component={Flashcards} />
         <Route path="/flashcards/:id" component={FlashcardsCon} />
+        <Route path="/tips/1" component={Tips1} />
+        <Route path="/tips/2" component={Tips2} />
       </Switch>
     </div>
   );

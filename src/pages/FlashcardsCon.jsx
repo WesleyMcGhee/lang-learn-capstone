@@ -44,7 +44,7 @@ export default function FlashcardsCon() {
         </section>
         <section className="navigate">
           <button
-            className="nav-btn"
+            className="flash-btn"
             onClick={() => {
               backCard();
             }}
@@ -52,7 +52,7 @@ export default function FlashcardsCon() {
             Back
           </button>
           <button
-            className="nav-btn"
+            className="flash-btn"
             onClick={() => {
               flip();
             }}
@@ -60,7 +60,7 @@ export default function FlashcardsCon() {
             Flip
           </button>
           <button
-            className="nav-btn"
+            className="flash-btn"
             onClick={() => {
               nextCard();
             }}
@@ -80,7 +80,7 @@ export default function FlashcardsCon() {
         </section>
         <section className="navigate">
           <button
-            className="nav-btn"
+            className="flash-btn"
             onClick={() => {
               backCard();
             }}
@@ -88,7 +88,7 @@ export default function FlashcardsCon() {
             Back
           </button>
           <button
-            className="nav-btn"
+            className="flash-btn"
             onClick={() => {
               flip();
             }}
@@ -96,7 +96,7 @@ export default function FlashcardsCon() {
             Flip
           </button>
           <button
-            className="nav-btn"
+            className="flash-btn"
             onClick={() => {
               nextCard();
             }}

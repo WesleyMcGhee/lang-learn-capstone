@@ -6,19 +6,30 @@ import useAxios from "../components/useAxios";
 export default function LessonContent() {
   const { id } = useParams();
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [right, setRight] = useState(0);
+  const [amount, setAmount] = useState(0);
   const [wrong, setWrong] = useState(null);
 
   const { data, error, loading } = useAxios(`/lessons/${id}`);
   function checkAnswer(question) {
     if (question === data[currentQuestion].answer) {
       if (currentQuestion + 1 !== data.length) {
+        if (amount === 0) {
+          setRight(right + 1);
+        }
         setCurrentQuestion(currentQuestion + 1);
         setWrong(null);
+        setAmount(0);
       } else {
-        setWrong("Congrats You passed");
+        if (right >= data.length - 3) {
+          setWrong("Congrats You passed");
+        } else {
+          setWrong("You failed try again");
+        }
       }
     } else {
       setWrong("Incorrect");
+      setAmount(amount + 1);
     }
   }
   if (loading) return <h1>Loading Lesson</h1>;
