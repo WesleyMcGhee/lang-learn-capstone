@@ -40,7 +40,7 @@ export default function FlashcardsCon() {
       <div>
         <Header />
         <section className="flashcard">
-          <h1 className="flashQ">{data[currentCard].card_front}</h1>
+          <h1 className="flashQ">{data[currentCard].cardfront}</h1>
         </section>
         <section className="navigate">
           <button
@@ -75,8 +75,8 @@ export default function FlashcardsCon() {
       <div>
         <Header />
         <section className="flashcard">
-          <h1 className="flashQ">{data[currentCard].card_back1}</h1>
-          <h1 className="flashQ">{data[currentCard].card_back2}</h1>
+          <h1 className="flashQ">{data[currentCard].cardback1}</h1>
+          <h1 className="flashQ">{data[currentCard].cardback2}</h1>
         </section>
         <section className="navigate">
           <button

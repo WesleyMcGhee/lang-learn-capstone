@@ -1,7 +1,5 @@
 const pool = require("./db");
 const bcrypt = require("bcrypt");
-const lessons = require("./lesson.json");
-const flashCards = require("./flashcard.json");
 
 module.exports = {
   postSignup: async (req, res) => {
@@ -52,30 +50,32 @@ module.exports = {
       console.error(err);
     }
   },
-  getLesson: (req, res) => {
+  getLesson: async (req, res) => {
     const { id } = req.params;
-    const dataToSend = [];
-    for (let i in lessons) {
-      if (lessons[i].lessonId === +id) {
-        dataToSend.push(lessons[i]);
-      }
-    }
-    res.status(200).send(dataToSend);
+    const dataToSend = await pool.query(
+      "SELECT * FROM lessoncontent WHERE lessonid = $1;",
+      [id]
+    );
+    res.status(200).send(dataToSend.rows);
   },
-  getFlashcards: (req, res) => {
+  getFlashcards: async (req, res) => {
     const { id } = req.params;
-    const dataToSend1 = [];
-    for (let i in flashCards) {
-      if (flashCards[i].lesson_id === +id) {
-        dataToSend1.push(flashCards[i]);
-      }
-    }
-    res.status(200).send(dataToSend1);
+    const dataToSend = await pool.query(
+      "SELECT * FROM flashcards WHERE lessonid = $1",
+      [id]
+    );
+    res.status(200).send(dataToSend.rows);
   },
-  getTest: async (req, res) => {
-    {
-      let dataQuery = await pool.query("SELECT * FROM test");
-      res.status(200).send(dataQuery.rows[0]);
-    }
+  getTips: async (req, res) => {
+    const { id } = req.params;
+    const dataToSend = await pool.query(
+      "SELECT * FROM tips WHERE lessonid = $1",
+      [id]
+    );
+    res.status(200).send(dataToSend.rows);
+  },
+  getLogo: async (req, res) => {
+    const dataToSend = await pool.query("SELECT * FROM lessons");
+    res.status(200).send(dataToSend.rows);
   },
 };

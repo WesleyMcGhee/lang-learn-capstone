@@ -8,8 +8,7 @@ import Lessons from "./pages/lessons";
 import Tips from "./pages/Tips";
 import Flashcards from "./pages/Flashcards";
 import FlashcardsCon from "./pages/FlashcardsCon";
-import Tips1 from "./pages/tipsPage/Tips1";
-import Tips2 from "./pages/tipsPage/Tips2";
+import TipsContent from "./pages/TipsContent";
 import "./App.css";
 
 function setToken(userToken) {
@@ -38,8 +37,7 @@ function App() {
         <Route exact path="/tips" component={Tips} />
         <Route exact path="/flashcards" component={Flashcards} />
         <Route path="/flashcards/:id" component={FlashcardsCon} />
-        <Route path="/tips/1" component={Tips1} />
-        <Route path="/tips/2" component={Tips2} />
+        <Route path="/tips/:id" component={TipsContent} />
       </Switch>
     </div>
   );

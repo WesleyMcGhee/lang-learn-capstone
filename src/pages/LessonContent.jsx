@@ -41,7 +41,7 @@ export default function LessonContent() {
       <h1>{wrong}</h1>
       <section className="lessonContentPage">
         <div className="lessonQuestion">
-          <h1 className="pan">{data[currentQuestion].lessonQ}</h1>
+          <h1 className="pan">{data[currentQuestion].question}</h1>
         </div>
         <div className="buttonControl">
           <button
