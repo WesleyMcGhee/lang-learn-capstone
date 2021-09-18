@@ -12,5 +12,6 @@ app.post("/users/login", ctrl.postSignin);
 app.get("/users/:id", ctrl.getUsers);
 app.get("/lessons/:id", ctrl.getLesson);
 app.get("/flashcards/:id", ctrl.getFlashcards);
+app.get("/testing", ctrl.getTest);
 
 app.listen(port, () => console.log(`Server is up and running on ${port}...`));

@@ -34,7 +34,7 @@ export default function LessonContent() {
   }
   if (loading) return <h1>Loading Lesson</h1>;
   if (error) return <h1>Something went wrong</h1>;
-
+  if (data.length === 0) return <h1>404 page not found</h1>;
   return (
     <div>
       <Header />

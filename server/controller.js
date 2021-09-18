@@ -72,4 +72,10 @@ module.exports = {
     }
     res.status(200).send(dataToSend1);
   },
+  getTest: async (req, res) => {
+    {
+      let dataQuery = await pool.query("SELECT * FROM test");
+      res.status(200).send(dataQuery.rows[0]);
+    }
+  },
 };
