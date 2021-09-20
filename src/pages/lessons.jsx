@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
-// import { withRouter } from "react-router";
+import { withRouter } from "react-router";
 function Lessons() {
   return (
     <div>
@@ -30,4 +30,4 @@ function Lessons() {
     </div>
   );
 }
-export default Lessons;
+export default withRouter(Lessons);

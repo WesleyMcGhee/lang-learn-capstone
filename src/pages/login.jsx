@@ -1,9 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 import LogHeader from "../components/LogHeader";
-
+import Auth from "../auth";
 export default function Login(props) {
   let [user, setUser] = useState("");
   let [pass, setPass] = useState("");
@@ -17,8 +16,10 @@ export default function Login(props) {
       })
       .then((res) => {
         userId = res.data;
-        props.setToken(res.data.token);
-        props.history.push("/lessons");
+        Auth.login(() => {
+          props.history.push("/lessons");
+        });
+
         console.log(this);
         console.log(props);
       });

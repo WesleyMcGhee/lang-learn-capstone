@@ -40,8 +40,7 @@ export default function () {
       <section className="form-content">
         <h1 className="log-bannar">Sign-Up</h1>
         <form
-          onSubmit={(e) => {
-            e.preventDefault();
+          onSubmit={() => {
             sendInfo();
           }}
         >
